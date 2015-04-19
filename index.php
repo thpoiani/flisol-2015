@@ -2,22 +2,15 @@
 
 require("vendor/autoload.php");
 
-use Symfony\Component\Translation\Translator;
-use Symfony\Component\Translation\Loader\ArrayLoader;
+require("src/funcionario/Atendente.php");
+require("src/utils/Dicionario.php");
 
-$translator = new Translator(null);
-
-$translator->addLoader('array', new ArrayLoader());
-
-$translator->addResource('array',
-    array('Hello World' => 'Olá mundo'), 'pt'
-);
-
-$translator->addResource('array',
-    array('Hello World' => 'Hola Mundo'), 'es'
-);
+use AgenciaDeViagens\Utils\Dicionario;
+use AgenciaDeViagens\Funcionario\Atendente;
 
 $language = isset($argv[1]) ? $argv[1] : null;
-$translator->setLocale($language);
 
-echo $translator->trans('Hello World');
+$atendente  = new Atendente();
+$dicionario = new Dicionario($language);
+
+echo $atendente->falar($dicionario, 'Hello World');
