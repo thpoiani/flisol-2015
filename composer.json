@@ -1,0 +1,13 @@
+{
+    "name": "thpoiani/flisol-2015",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thiago Henrique Poiani",
+            "email": "thpoiani@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/translation": "2.6.6"
+    }
+}
