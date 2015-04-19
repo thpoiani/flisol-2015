@@ -2,8 +2,8 @@
 
 require("vendor/autoload.php");
 
-require("src/funcionario/Atendente.php");
-require("src/utils/Dicionario.php");
+require("src/Funcionario/Atendente.php");
+require("src/Utils/Dicionario.php");
 
 use AgenciaDeViagens\Utils\Dicionario;
 use AgenciaDeViagens\Funcionario\Atendente;
